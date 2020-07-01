@@ -1,4 +1,4 @@
-# jemdoc: menu{MENU}{index.html}, title({Omar A. Beg's homepage}, nodefaultcss, addcss{omar.css}, analytics{UA-77683282-1}
+# jemdoc: menu{MENU}{index}, title({Omar A. Beg's homepage}, nodefaultcss, addcss{omar.css}, analytics{UA-77683282-1}
 = Welcome to Omar A. Beg's Homepage
 
 ~~~
