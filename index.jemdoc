@@ -1,0 +1,115 @@
+# jemdoc: menu{MENU}{index.html}, title({Luan V. Nguyen's homepage}, nodefaultcss, addcss{luan.css}, analytics{UA-77683282-1}
+= Welcome to Luan V. Nguyen's Homepage
+
+~~~
+{}{img_left}{luan_new_image_small.png}{Luan Nguyen}
+*Luan V. Nguyen*, Ph.D.\n
+Assistant Professor\n
+[https://udayton.edu/artssciences/academics/computerscience/index.php Department of Computer Science]\n
+[https://udayton.edu/ University of Dayton]\n
+Email: luanvnguyen dot vn at gmail dot com
+~~~
+
+
+*Brief Bio*: I am currenly an Assistant Professor at the [https://udayton.edu/artssciences/academics/computerscience/index.php Department of Computer Science], [https://udayton.edu/ University of Dayton]. 
+Previously, I was a postdoctoral research associate at the [https://ee.nd.edu/ Department of Electrical Engineering], [https://www.nd.edu/ University of Notre Dame] (Oct 2019 - July 2020), and at the [https://precise.seas.upenn.edu/ PRECISE Center], [https://www.upenn.edu/ University of Pennsylvania] (June 2018 - Sep 2019). 
+I received my B.E. in May 2012 and M.Sc. degree in December 2012 at [https://www.catholic.edu/index.html The Catholic University of America].
+During my Ph.D., I was a member of the [http://www.verivital.com/ Verivital Lab] at [https://www.uta.edu/uta/ The University of Texas at Arlington], under the supervision of Prof. [http://www.taylortjohnson.com/ Taylor T. Johnson]. 
+My research interest is to develop formal verification techniques and state-of-the-art software tools to enforce safety, reliability, security and resiliency of autonomous cyber-physical systems (CPS), with practical applications accross CPS domains such as power and energy systems, medical devices, automotive, aerospace, and robotics. 
+
+
+
+
+# Luan Nguyen's CV can be found [LuanNguyen-CV.pdf here].  
+
+== What's new
+- May 2020: Accepted a tenure-track position at the [https://udayton.edu/artssciences/academics/computerscience/index.php Department of Computer Science], [https://udayton.edu/ University of Dayton]
+- April 2020: Paper accepted at CAV 2020
+- October 2019: Recieved *Best Paper Award* at MEMOCODE 2019
+- August 2019: Paper accepted at MEMOCODE 2019
+- July 2019: Papers accepted at FM and FORMAT 2019
+- April 2019: Paper accepted at FORTE 2019 
+- March 2019: Paper accepted at FORMALISE 2019
+
+
+== Research Interest
+- Cyber-Physical Systems: Formal Verification, Logic-guided Testing, and Specification Mining
+- Model-based Repair for Improving Resiliency of Hybrid Systems 
+- Safe Autonomy
+- Information Flow Analysis 
+- Software Engineering
+
+
+
+== Education
+- Ph.D., Computer Engineering, [http://www.uta.edu The University of Texas at Arlington],
+  May 2018 
+- M.Sc., Computer Science, [http://eecs.cua.edu/ The Catholic University of America],
+  December 2012
+- B.E., Electrical Engineering, [http://eecs.cua.edu/ The Catholic University of America], May 2012
+
+== Tools
+- [https://github.com/LuanVietNguyen/reaffirm REAFFIRM]: Model-Based Repair of Hybrid Systems for Improving Resiliency (main developer)
+- [http://www.verivital.com/hyrg HyRG]: A Random Generation Tool for Affine Hybrid Automata (main developer)
+- [https://github.com/verivital/nnv NNV]: A Matlab Toolbox For Neural Network Verification (contributor)
+- [https://bitbucket.org/verivital/hynger Hynger]: A Prototype toward Identifying Cyber-Physical Specification Mismatches (contributor)
+- [https://github.com/verivital/hyst HyST]: A Source Transformation and Translation Tool for Hybrid Automaton Models (contributor)
+
+== Publications
+- *Journal Articles:*
+-- J6. Hoang Dung Tran, *Luan Viet Nguyen*, Patrick Musau, Weiming Xiang, and Taylor T. Johnson, "Real-Time Verification for Distributed Cyber-Physical Systems," Logical Methods in Computer Science, Special Issue, 2019 (invited paper) ([https://link.springer.com/chapter/10.1007/978-3-030-21759-4_15 link])
+-- J5. Stanley Bak, Omar Beg, Sergiy Bogomolov, Taylor T. Johnson, *Luan Viet Nguyen*, and Christian Schilling, "Hybrid Automata: from Verification to Implementation," International Journal on Software Tools for Technology Transfer, Springer, vol. 21, pp. 87-104, February 2019 ([http://www.taylortjohnson.com/research/bak2017sttt.pdf link])
+-- J4. *Luan Viet Nguyen*, Khaza Anuarul Hoque, Stanley Bak, Steven Drager, and Taylor T. Johnson, "Cyber-Physical Specification Mismatches," ACM Transactions on Cyber-Physical Systems (TCPS), September 2018 ([http://www.taylortjohnson.com/research/nguyen2018tcps.pdf link])
+-- J3. Omar Beg, *Luan Viet Nguyen*, Taylor T. Johnson and Ali Davoudi, "Signal Temporal Logic-based Attack Detection in DC Microgrids," IEEE Transactions on Smart Grid, 2017 ([https://ieeexplore.ieee.org/document/8353490 link])
+-- J2. Hoang Dung Tran, *Luan Viet Nguyen*, Weiming Xiang, and Taylor T. Johnson, "Order-reduction abstractions for safety verification of high-dimensional linear systems," Springer Discrete Event Dynamic Systems, Special Issue on Formal Methods in Control, February 2017 ([https://link.springer.com/article/10.1007/s10626-017-0244-y link])
+-- J1. *Luan Viet Nguyen*, Hoang-Dung Tran, and Taylor T. Johnson, "Virtual Prototyping for Distributed Control of a Fault-Tolerant Modular Multilevel Inverter for Photovoltaics," in IEEE Transactions on Energy Conversion, vol. 29, pp. 841-850, December 2014 ([http://www.taylortjohnson.com/research/nguyen2014tec.pdf link])
+	
+	
+- *Conference Proceeding Papers:*
+-- C14. Hoang-Dung Tran, Xiaodong Yang, Diego Manzanas Lopez, Patrick Musau, *Luan Viet Nguyen*, Weiming Xiang, Stanley Bak, and Taylor T. Johnson,  "NNV: The Neural Network Verification Tool for Deep Neural Networks and Learning-Enabled Cyber-Physical Systems", in 32nd International Conference on Computer-Aided Verification (CAV), 2020, July. ([http://www.taylortjohnson.com/research/tran2020cav_tool.pdf link])
+-- C13. *Luan Viet Nguyen*, Gautam Mohan, James Weimer, Oleg Sokolsky, Insup Lee, and Rajeev Alur, "Detecting Security Leaks in Hybrid Systems with Information Flow Analysis," in 17th ACM-IEEE International Conference on Formal Methods and Models for System Design (MEMOCODE 2019), San Diego, October 2019. (*Best Paper Award*)([https://dl.acm.org/citation.cfm?id=3361212 link])
+-- C12. Hoang Dung Tran, Patrick Musau, Manxanas Lopez Diego, Xiao Dong Yang, *Luan Viet Nguyen*, Weiming Xiang, and Taylor T. Johnson, "Star-Based Reachability Analysis of Deep Neural Networks," in 23rd International Symposium on Formal Methods (FM 2019), Portugal, October 2019. ([http://www.taylortjohnson.com/research/tran2019fm.pdf link])  
+-- C11. Hoang Dung Tran, *Luan Viet Nguyen*, Weiming Xiang, and Taylor T. Johnson, "Reachability Analysis for High-Index Large Linear Differential Algebraic Equations," in 17th International Conference on Formal Modeling and Analysis of Timed Systems (FORMAT 2019), Amsterdam, Netherlands, August 2019. ([http://www.taylortjohnson.com/research/tran2019formats.pdf link]) 
+-- C10. Hoang Dung Tran, *Luan Viet Nguyen*, Patrick Musau, Weiming Xiang, and Taylor T. Johnson, "Decentralized Real-Time Safety Verification for Distributed Cyber-Physical Systems," in 39th International Conference on Formal Techniques for Distributed Objects, Components, and Systems (FORTE 2019), Denmark, June 2019. ([http://www.taylortjohnson.com/research/tran2019forte.pdf link])
+-- C9. Hoang Dung Tran, Patrick Musau, Manxanas Lopez Diego, Xiao Dong Yang, *Luan Viet Nguyen*, Weiming Xiang, and Taylor T. Johnson, "Parallelizable Reachability Analysis Algorithms for Feed-Forward Neural Networks," in 7th International Conference on Formal Methods in Software Engineering (FORMALISE 2019), Montreal, May 2019. ([https://dl.acm.org/citation.cfm?id=3338820 link])
+-- C8. *Luan Viet Nguyen*, Gautam Mohan, James Weimer, Oleg Sokolsky, Insup Lee, and Rajeev Alur, "REAFFIRM: Model-Based Repair of Hybrid Systems for Improving Resiliency," February, 2019 ([https://arxiv.org/abs/1902.04064 arxiv]) 
+-- C7. *Luan Viet Nguyen*, Bardh Hoxha, Georgios Fainekos and Taylor T. Johnson, "Mission Planning for Multiple Unmanned Vehicles using UxAS," in IFAC Conference on Analysis and Design of Hybrid Systems (ADHS 2018), Oxford, July 2018.  ([http://www.taylortjohnson.com/research/nguyen2018adhs.pdf link])
+-- C6. Omar Beg, *Luan Viet Nguyen*, Taylor T. Johnson and Ali Davoudi, "Computer-Aided Formal Verification of Power Electronics Circuits," Frontiers in Analog CAD, Proceedings of, pp. 1-6. VDE, 2017 ([http://www.taylortjohnson.com/research/beg2017fac.pdf link])
+-- C5. *Luan Viet Nguyen*, James Kapinski, Xiaoqing Jin, Jyotirmoy Deshmukh, and Taylor T. Johnson, "Hyperproperties of Real-Valued Signals," 15th ACM-IEEE International Conference on Formal Methods and Models for System Design (MEMOCODE 2017), Vienna, October 2017 ([http://www.taylortjohnson.com/research/nguyen2017memocode.pdf link])
+-- C4. *Luan Viet Nguyen*, James Kapinski, Xiaoqing Jin, Jyotirmoy Deshmukh, Ken Butts, and Taylor T. Johnson, "Abnormal Data Classification Using Time-Frequency Temporal Logic," 20th ACM International Conference on Hybrid Systems: Computation and Control 2017 (HSCC 2017), Pittsburgh, PA, April 2017 ([https://dl.acm.org/citation.cfm?id=3049809 link])
+-- C3. Parasara Sridhar Duggirala, Chuchu Fan, Matthew Potok, Bolun Qi, Sayan Mitra, Mahesh Viswanathan, Stanley Bak, Sergiy Bogomolov, Taylor T. Johnson, *Luan Viet Nguyen*, Christian Schilling, Andrew Sogokon, Hoang-Dung Tran, and Weiming Xiang, "Tutorial: Software Tools for Hybrid Systems Verification, Transformation, and Synthesis: C2E2, HyST, and TuLiP", In Proceedings of the IEEE Multi-Conference on Systems and Controls (MSC 2016), Las Vegas, NV, USA, 2016, September ([http://www.taylortjohnson.com/research/duggirala2016msc.pdf link])
+-- C2. *Luan Viet Nguyen*, Christian Schilling, Sergiy Bogomolov, and Taylor T. Johnson, "Runtime Verification for Hybrid Analysis Tools," in 15th International Conference on Runtime Verification (RV 2015), Vienna, Austria, September 2015 ([http://www.taylortjohnson.com/research/nguyen2015rv.pdf link])
+-- C1. *Luan Viet Nguyen*, Christian Schilling, Sergiy Bogomolov, and Taylor T. Johnson, "HyRG: A Random Generation Tool for Affine Hybrid Automata," in 18th International Conference on Hybrid Systems: Computation and Control (HSCC 2015), CPSWeek 2015, Seattle, WA, April 2015 ([http://www.taylortjohnson.com/research/nguyen2015hscc.pdf link])
+	
+	
+- *Workshop Proceeding Papers:*
+-- W6. Hoang-Dung Tran, *Luan Viet Nguyen*, Weiming Xiang and Taylor T. Johnson, "Distributed Autonomous Systems (Benchmark Proposal)," in 4th International Workshop on Applied Verification for Continuous and Hybrid Systems (ARCH 2017), Pittsburgh, PA, April 2017 ([http://www.taylortjohnson.com/research/tran2017arch.pdf link])
+-- W5. Hoang-Dung Tran, *Luan Viet Nguyen*, and Taylor T. Johnson, "Large-Scale Linear Systems from Order-Reduction (Benchmark Proposal)," in 3rd International Workshop on Applied Verification for Continuous and Hybrid Systems (ARCH 2016), Vienna, Austria, April 2016 ([http://www.taylortjohnson.com/research/tran2016arch.pdf link])
+-- W4. *Luan Viet Nguyen*, Djordje Maksimovic, Taylor T. Johnson, and Andreas Veneris, "Quantified Bounded Model Checking for Rectangular Hybrid Automata," in 9th International Workshop on Constraints in Formal Verification (CFV 2015), Austin, TX, November 2015 ([http://www.taylortjohnson.com/research/nguyen2015cfv.pdf link])
+-- W3. Hoang-Dung Tran, *Luan Viet Nguyen*, and Taylor T. Johnson, "Benchmark: A Nonlinear Reachability Analysis Test Set from Numerical Analysis," in 2nd International Workshop on Applied Verification for Continuous and Hybrid Systems (ARCH 2015), CPSWeek 2015, Seattle, WA, April 2015 ([http://www.taylortjohnson.com/research/tran2015arch.pdf link])
+-- W2. *Luan Viet Nguyen* and Taylor T. Johnson, "Benchmark: DC-to-DC Switched-Mode Power Converters (Buck Converters, Boost Converters, and Buck-Boost Converters)," in 1st International Workshop on Applied Verification for Continuous and Hybrid Systems Workshop (ARCH 2014), Berlin, Germany, April 2014 ([http://www.taylortjohnson.com/research/nguyen2014arch.pdf link])
+-- W1. *Luan Viet Nguyen*, Eric Nelson, Amol Vengurlekar, Ruoshi Zhang, Kristopher I White, Victor Salinas, and Taylor T. Johnson, "Model-Based Design and Analysis of a Reconfigurable Continuous-Culture Bioreactor (Work-in-Progress)," in 4th ACM Workshop on Design, Modeling, and Evaluation of Cyber Physical Systems (Cyphy 2014), Berlin, Germany, April 2014 ([http://www.taylortjohnson.com/research/nguyen2014cyphy.pdf link])
+
+	
+- *Posters:*
+-- P3. *Luan Viet Nguyen*, James Kapinski, Xiaoqing Jin, Jyotirmoy Deshmukh, and Taylor T. Johnson, "Hyperproperties of Real-Valued Signals" Hybrid Systems Computation and Control 2017 (HSCC 2017), Pittsburgh, PA, April 2017
+-- P2. *Luan Viet Nguyen*, and Taylor T. Johnson, "Towards Bounded Model Checking for Timed and Hybrid Automata with a Quantified Encoding," in PhD Student Forum, 15th International Conference on Formal Methods in Computer-Aided Design (FMCAD), Austin, TX, September 2015
+-- P1. *Luan Viet Nguyen*, and Taylor T. Johnson, "Model-Based Design and Analysis of a Continuous Culture Bioreactor for Systems Biology Experiments," Texas Systems Day, Texas A&M University, College Station, TX, March 2014
+
+- *Patents:*
+-- Jyotirmoy Deshmuk, James Kapinski, Xiaoqing Jin, and *Luan Viet Nguyen*, "Privacy-Aware Signal Monitoring Systems and Methods," Patent No. US 20180286143, April 2018 ([http://www.freepatentsonline.com/y2018/0286143.html link]) 
+
+== Teaching
+Teaching assistant at [http://www.uta.edu/ The University of Texas at Arlington] for:
+- Operating Systems (CSE3320), Fall 2017 and Spring 2018
+- Object-oriented Programming (CSE1325), Spring 2014, Summer 2014, Fall 2014, and Spring 2015
+
+== Award and Honors
+- Best Paper Award for the paper "Detecting Security Leaks in Hybrid Systems with Information Flow Analysis," in 17th ACM-IEEE International Conference on Formal Methods and Models for System Design (MEMOCODE 2019),San Diego, October 2019.
+- Toyota Travel Award for paper presentation at 20th ACM International Conference on Hybrid Systems: Computation and Control 2017 (HSCC 2017), Pittsburgh, PA, April 2017.
+- NSF Travel Award for PhD Student Forum, in 15th International Conference on Formal Methods in Computer-Aided Design (FMCAD), Austin, TX.
+- NSF and ACM SIGBED Travel Awards for Cyber-Physical Systems Week (CPSWeek 2015), Seattle, WA.	
+- NSF Travel Award for CPS Verification and Validation: Industrial Challenges and Foundations (CPS V&V I&F), Carnegie Mellon University, Pittsburgh, PA.
+- 3rd Place Winner and $1000 Award in US/India Chamber DFW (USICOC) Spirit of Innovation Competition, Dallas, TX.
+
+
