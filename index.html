@@ -1,289 +1,592 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="omar.css" type="text/css" />
-<title>Omar A. Beg's homepage</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omar A. Beg | Associate Professor & Department Chair, UTPB</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:     #1a2a4a;
+      --navy-mid: #243659;
+      --gold:     #b8860b;
+      --gold-lt:  #d4a017;
+      --cream:    #faf8f4;
+      --off-white:#f0ece3;
+      --text:     #2c2c2c;
+      --muted:    #5a5a5a;
+      --border:   #d0ccc4;
+      --rule:     #c8a84b;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── TOP BAR ── */
+    header {
+      background: var(--navy);
+      color: #fff;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    header .site-name {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+      color: #fff;
+      text-decoration: none;
+    }
+    nav { display: flex; gap: 0; }
+    nav a {
+      color: #d0d8e8;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 0 1rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    nav a:hover, nav a.active {
+      color: #fff;
+      border-bottom-color: var(--rule);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      color: #fff;
+      padding: 3.5rem 2rem 3rem;
+    }
+    .hero-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+    .hero-photo {
+      flex-shrink: 0;
+      width: 160px;
+      height: 200px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(200,168,75,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none; /* shown when src is set */
+    }
+    .photo-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 1rem;
+    }
+    .photo-placeholder svg { opacity: 0.4; }
+
+    .hero-text { flex: 1; }
+    .hero-text h1 {
+      font-family: 'EB Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
+    }
+    .hero-text .title-line {
+      font-size: 1rem;
+      color: var(--gold-lt);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.15rem;
+    }
+    .hero-text .dept-line {
+      font-size: 0.9rem;
+      color: #aab8cc;
+      margin-bottom: 1rem;
+    }
+    .hero-text .dept-line a { color: #aab8cc; }
+
+    .hero-rule {
+      width: 48px;
+      height: 2px;
+      background: var(--rule);
+      margin: 0.9rem 0;
+    }
+
+    .hero-bio {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #c8d4e0;
+      max-width: 620px;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.4rem;
+    }
+    .hero-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.4rem 0.85rem;
+      border: 1px solid rgba(200,168,75,0.45);
+      border-radius: 3px;
+      font-size: 0.8rem;
+      color: #d4c48a;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .hero-links a:hover {
+      background: rgba(200,168,75,0.12);
+      border-color: var(--rule);
+    }
+    .hero-links a svg { flex-shrink: 0; }
+
+    /* ── MAIN LAYOUT ── */
+    .page-body {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    /* ── SECTION ── */
+    section { margin-bottom: 2.75rem; }
+    section:last-child { margin-bottom: 0; }
+
+    .section-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.45rem;
+      color: var(--navy);
+      font-weight: 600;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ── RESEARCH ── */
+    .research-text {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* ── PUBLICATIONS ── */
+    .pub-group-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 1.2rem 0 0.6rem;
+    }
+    .pub-list { list-style: none; }
+    .pub-list li {
+      padding: 0.75rem 0 0.75rem 1rem;
+      border-left: 3px solid var(--off-white);
+      margin-bottom: 0.5rem;
+      font-size: 0.91rem;
+      line-height: 1.7;
+      transition: border-color 0.2s;
+    }
+    .pub-list li:hover { border-left-color: var(--rule); }
+    .pub-list li .pub-title { font-style: italic; }
+    .pub-list li .pub-venue { color: var(--navy); font-weight: 600; }
+    .pub-list li a {
+      color: var(--gold);
+      font-size: 0.8rem;
+      margin-left: 0.4rem;
+    }
+
+    /* ── TEACHING ── */
+    .term-block { margin-bottom: 1rem; }
+    .term-label {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+    .term-courses {
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding-left: 0.75rem;
+      border-left: 2px solid var(--border);
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 80px; }
+
+    .sidebar-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--navy);
+      border-radius: 3px;
+      padding: 1.25rem 1.2rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.88rem;
+    }
+    .sidebar-card h3 {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.05rem;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .edu-item { margin-bottom: 0.8rem; }
+    .edu-item .degree {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.88rem;
+    }
+    .edu-item .school, .edu-item .year {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .award-list { list-style: none; }
+    .award-list li {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--off-white);
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    .award-list li:last-child { border-bottom: none; }
+    .award-list li strong {
+      display: block;
+      color: var(--text);
+      font-size: 0.87rem;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .contact-row svg { margin-top: 2px; flex-shrink: 0; color: var(--navy); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: #8090a8;
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 1.25rem;
+    }
+    footer a { color: #aab8cc; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 720px) {
+      .hero-inner { flex-direction: column; }
+      .hero-photo { width: 120px; height: 150px; }
+      .page-body { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      nav a { padding: 0 0.6rem; font-size: 0.78rem; }
+    }
+  </style>
 </head>
 <body>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+<!-- NAV -->
+<header>
+  <a class="site-name" href="#top">Omar A. Beg</a>
+  <nav>
+    <a href="#research" class="active">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#teaching">Teaching</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+
+    <!-- Photo slot: replace src with your image file name, e.g. src="photo.jpg" -->
+    <div class="hero-photo">
+      <img id="profile-img" src="" alt="Omar A. Beg" />
+      <div class="photo-placeholder" id="photo-placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        <span>Add photo.jpg<br/>to your repo</span>
+      </div>
+    </div>
+
+    <div class="hero-text">
+      <h1>Omar A. Beg</h1>
+      <p class="title-line">Ph.D. &nbsp;·&nbsp; PMP &nbsp;·&nbsp; Associate Professor &amp; Department Chair</p>
+      <p class="dept-line">
+        <a href="https://www.utpb.edu/academics/colleges/engineering/departments/electrical-engineering/index" target="_blank">
+          Department of Computer Science and Electrical Engineering
+        </a> &nbsp;·&nbsp;
+        <a href="https://www.utpb.edu/" target="_blank">University of Texas Permian Basin</a>
+      </p>
+      <div class="hero-rule"></div>
+      <p class="hero-bio">
+        Omar A. Beg is an Associate Professor and Department Chair of Computer Science and Electrical
+        Engineering at UTPB. His research applies formal methods and artificial intelligence to build
+        cyber-resilient microgrids and smart power systems. He holds a PMP certification from PMI and
+        previously served as an Assistant Professor of Research at UT Arlington, working on Office of
+        Naval Research–funded projects.
+      </p>
+      <div class="hero-links">
+        <a href="OmarBeg-CV.pdf" target="_blank">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Curriculum Vitae
+        </a>
+        <a href="https://scholar.google.com/citations?user=0_fASfcAAAAJ&hl=en" target="_blank">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Google Scholar
+        </a>
+        <a href="https://www.linkedin.com/in/omar-ali-beg-1224b462/" target="_blank">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN BODY -->
+<div class="page-body">
+
+  <!-- LEFT COLUMN -->
+  <main>
+
+
+
+    <!-- RESEARCH -->
+    <section id="research">
+      <h2 class="section-title">Research Interests</h2>
+      <p class="research-text">
+        Microgrids are finite-inertia power systems that integrate distributed generation including renewable
+        energy resources, energy storage, and loads. Such microgrids have evolved into cyber-physical systems
+        due to complex software-based controllers, IoT, and communication networks, making them vulnerable to
+        cyber intrusions.
+      </p>
+      <br/>
+      <p class="research-text">
+        Dr. Beg's multidisciplinary research applies techniques from <strong>formal methods</strong> and
+        <strong>artificial intelligence</strong> to make microgrids more resilient against cyber attacks and
+        physical faults. The goal is to develop intelligent techniques that ensure cyber-physical microgrids
+        maintain trusted assurance despite potential emergent contingencies, attacks, and failures.
+      </p>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <h2 class="section-title">Publications</h2>
+
+      <p class="pub-group-title">Journal Articles</p>
+      <ul class="pub-list">
+        <li>
+          Shan Zuo, <strong>Omar A. Beg</strong>, Ali Davoudi, and Frank L. Lewis,
+          <span class="pub-title">"Resilient Networked AC Microgrids Under Unbounded Cyber Attacks,"</span>
+          <span class="pub-venue">IEEE Transactions on Smart Grid</span>, vol. 11, no. 5, pp. 3785–3794, Sept. 2020.
+        </li>
+        <li>
+          <strong>Omar A. Beg</strong>, Luan Viet Nguyen, Taylor T. Johnson, and Ali Davoudi,
+          <span class="pub-title">"Signal Temporal Logic-based Attack Detection in DC Microgrids,"</span>
+          <span class="pub-venue">IEEE Transactions on Smart Grid</span>, vol. 10, no. 4, pp. 3585–3595, July 2019.
+          <a href="https://ieeexplore.ieee.org/document/8353490" target="_blank">[link]</a>
+        </li>
+        <li>
+          <strong>Omar A. Beg</strong>, Houssam Abbas, Taylor T. Johnson, and Ali Davoudi,
+          <span class="pub-title">"Model Validation of PWM DC-DC Converters,"</span>
+          <span class="pub-venue">IEEE Transactions on Industrial Electronics</span>, vol. 64, no. 9, pp. 7049–7059, Sept. 2017.
+        </li>
+        <li>
+          <strong>Omar A. Beg</strong>, Taylor T. Johnson, and Ali Davoudi,
+          <span class="pub-title">"Detection of False-data Injection Attacks in Cyber-Physical DC Microgrids,"</span>
+          <span class="pub-venue">IEEE Transactions on Industrial Informatics</span>, vol. 13, no. 5, pp. 2693–2703, Oct. 2017.
+        </li>
+        <li>
+          Stanley Bak, <strong>Omar A. Beg</strong>, Sergiy Bogomolov, Taylor T. Johnson, Luan Viet Nguyen, and Christian Schilling,
+          <span class="pub-title">"Hybrid Automata: from Verification to Implementation,"</span>
+          <span class="pub-venue">International Journal on Software Tools for Technology Transfer</span>, Springer, vol. 21, pp. 87–104, Feb. 2019.
+          <a href="http://www.taylortjohnson.com/research/bak2017sttt.pdf" target="_blank">[link]</a>
+        </li>
+      </ul>
+
+      <p class="pub-group-title">Conference &amp; Workshop Papers</p>
+      <ul class="pub-list">
+        <li>
+          <strong>Omar A. Beg</strong>, Luan Viet Nguyen, Taylor T. Johnson, and Ali Davoudi,
+          <span class="pub-title">"Computer-Aided Formal Verification of Power Electronics Circuits,"</span>
+          <span class="pub-venue">Frontiers in Analog CAD</span>, Frankfurt, Germany, 2017.
+          <a href="http://www.taylortjohnson.com/research/beg2017fac.pdf" target="_blank">[link]</a>
+        </li>
+        <li>
+          <strong>Omar A. Beg</strong>, Ali Davoudi, and Taylor T. Johnson,
+          <span class="pub-title">"Reachability Analysis of Transformer-Isolated DC-DC Converters,"</span>
+          <span class="pub-venue">ARCH 2017</span>, co-located with CPS Week, Pittsburgh, PA, April 2017.
+        </li>
+        <li>
+          <strong>Omar A. Beg</strong>, Ali Davoudi, and Taylor T. Johnson,
+          <span class="pub-title">"Charge Pump Phase-Locked Loops and Full Wave Rectifiers for Reachability Analysis,"</span>
+          <span class="pub-venue">ARCH 2016</span>, co-located with CPS Week, Vienna, Austria, April 2016.
+        </li>
+      </ul>
+    </section>
+
+    <!-- TEACHING -->
+    <section id="teaching">
+      <h2 class="section-title">Teaching</h2>
+      <div class="term-block">
+        <div class="term-label">Spring 2021</div>
+        <div class="term-courses">Design Methods in Electrical Engineering &nbsp;·&nbsp; Fundamentals of Circuit Analysis &nbsp;·&nbsp; Digital Circuit Design Lab &nbsp;·&nbsp; Signals and Systems</div>
+      </div>
+      <div class="term-block">
+        <div class="term-label">Fall 2020</div>
+        <div class="term-courses">Foundations of Electrical Engineering &nbsp;·&nbsp; Electromagnetic Fields &nbsp;·&nbsp; Fundamentals of Circuit Analysis Lab &nbsp;·&nbsp; Electronics Circuits Lab</div>
+      </div>
+      <div class="term-block">
+        <div class="term-label">Summer 2020</div>
+        <div class="term-courses">Fundamentals of Circuit Analysis</div>
+      </div>
+      <div class="term-block">
+        <div class="term-label">Spring 2020</div>
+        <div class="term-courses">Signals and Systems &nbsp;·&nbsp; Fundamentals of Circuit Analysis</div>
+      </div>
+      <div class="term-block">
+        <div class="term-label">Fall 2019</div>
+        <div class="term-courses">Digital Circuit Design and Lab &nbsp;·&nbsp; Electromagnetic Fields &nbsp;·&nbsp; Fundamentals of Circuit Analysis Lab</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-card">
+      <h3>Contact</h3>
+      <div class="contact-row">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>beg_o &nbsp;[at]&nbsp; utpb.edu</span>
+      </div>
+      <div class="contact-row">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Dept. of Computer Science and Electrical Engineering<br/>UT Permian Basin<br/>Odessa, TX</span>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Education</h3>
+      <div class="edu-item">
+        <div class="degree">Ph.D., Electrical Engineering</div>
+        <div class="school"><a href="http://www.uta.edu" target="_blank">UT Arlington</a></div>
+        <div class="year">July 2017</div>
+      </div>
+      <div class="edu-item">
+        <div class="degree">Project Management Professional (PMP)</div>
+        <div class="school"><a href="https://www.pmi.org/" target="_blank">Project Management Institute</a></div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Honors &amp; Awards</h3>
+      <ul class="award-list">
+        <li>
+          <strong>UTPB President's Research Award</strong>
+          Conferred by UT Permian Basin President, 2022.<br/>
+          <em>Recognition: Outstanding research performance among the university faculty.</em>
+        </li>
+        <li>
+          <strong>College of Engineering Outstanding Faculty in Research Award</strong>
+          Conferred by the Dean, 2022.<br/>
+          <em>Recognition: Outstanding research performance among the college faculty.</em>
+        </li>
+        <li>
+          <strong>Arlen and Betty Edgar Endowed Fellow in Engineering</strong>
+          Approved by UT System, 2022&ndash;Present.<br/>
+          <em>Recognition: In recognition of outstanding research and overall exemplary performance.</em>
+        </li>
+      </ul>
+    </div>
+
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>Omar A. Beg &nbsp;·&nbsp; Associate Professor &amp; Department Chair, Computer Science and Electrical Engineering &nbsp;·&nbsp;
+  <a href="https://www.utpb.edu/" target="_blank">University of Texas Permian Basin</a></p>
+</footer>
+
+<script>
+  // Show profile image when src is set
+  const img = document.getElementById('profile-img');
+  const placeholder = document.getElementById('photo-placeholder');
+  if (img.src && img.src !== window.location.href) {
+    img.style.display = 'block';
+    placeholder.style.display = 'none';
+  }
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('nav a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Active nav highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
 </script>
-<script type="text/javascript">
-try {
-    var pageTracker = _gat._getTracker("UA-77683282-1");
-    pageTracker._trackPageview();
-} catch(err) {}</script>
-<table summary="Table for page layout." id="tlayout">
-<tr valign="top">
-<td id="layout-menu">
-<div class="menu-category">Omar A. Beg</div>
-<div class="menu-item"><a href="index.html" class="current">Home</a></div>
-<div class="menu-item"><a href="OmarBeg-CV.pdf">CV</a></div>
-<div class="menu-category">Other Profiles</div>
-<div class="menu-item"><a href="https://scholar.google.com/citations?user=0_fASfcAAAAJ&hl=en">Google&nbsp;Scholar</a></div>
-<div class="menu-item"><a href="https://www.linkedin.com/in/omar-ali-beg-1224b462/">Linkedin</a></div>
-</td>
-<td id="layout-content">
-<div id="toptitle">
-<h1>Welcome to Omar A. Beg's Homepage
-</h1>
-<div id="subtitle">
-</div>
-</div>
-<table class="imgtable"><tr><td>
-<img src="OmarBeg.png" alt="Omar A. Beg" />&nbsp;</td>
-<td align="left"><p><b>Omar A. Beg</b>, Ph.D., PMP<br />
-
-Assistant Professor<br />
-
-<a href="https://www.utpb.edu/academics/colleges/engineering/departments/electrical-engineering/index" target=&ldquo;blank&rdquo;>Department of Electrical Engineering</a><br />
-
-<a href="https://www.utpb.edu/index" target=&ldquo;blank&rdquo;>The University of Texas Permian Basin</a><br />
-
-<br />
-
-Project Management Professional (PMP)<br />
-
-from <a href="https://www.pmi.org/" target=&ldquo;blank&rdquo;>Project Management Institute, USA</a><br />
-
-<br />
-
-Email: last name underscore o at utpb dot edu
-</p>
-</td></tr></table>
-<p>
-
-<b>Brief Bio</b>: Omar A. Beg is an Assistant Professor at the <a href="https://www.utpb.edu/academics/colleges/engineering/departments/electrical-engineering/index" target=&ldquo;blank&rdquo;>Department of Electrical Engineering</a>, 
-<a href="https://www.utpb.edu/index" target=&ldquo;blank&rdquo;>University of Texas Permian Basin</a>. 
-Previously, he was with <a href="http://www.uta.edu" target=&ldquo;blank&rdquo;>the University of Texas at Arlington</a> as an Assistant Professor of Research
-where he worked on projects funded by the Office of Naval Research. He earned his Ph.D. degree
-in electrical engineering from the same school. He earned his Project Management Professional (PMP) certification
-from <a href="https://www.pmi.org/" target=&ldquo;blank&rdquo;>Project Management Institute (PMI), USA</a>. He was a recipient of the U.S. Air Force Research Laboratory 
-Summer Research Fellowship in 2015. He is also the recipient of the Rising STARs (Science and Technology Acquisition and Retention) 
-grant by <a href="https://www.utsystem.edu/" target=&ldquo;blank&rdquo;>the University of Texas System</a>. As PI, he has secured another grant 
-to support the undergraduate students from Texas Higher Education Coordinating Board.
-</p>
-
-
-
-<!--new item-->
-<h2>What's new
-</h2>
-<ul><!--start unordered list-->
-<!--start item 1-->
-<li><p>May 2021: PI - Instrumentation grant $291,937 approved by the Department of Defense
-</p>
-</li><!--close first item-->
-<!--start item 2-->
-<li><p>March 2021: PI - Support grant $112,500 for undergraduate students approved by Texas Higher Education Coordinating Board
-</p>
-</li><!--close first item-->
-<!--start item 1-->
-<li><p>February 2021: Paper published in IEEE Access
-</p>
-</li><!--close first item-->
-<!--start item 1-->
-<li><p>January 2021: Paper published in Elsevier Jounrnal of Electric Power Systems Research
-</p>
-</li><!--close first item-->
-<!--start item 3-->
-<li><p>October 2020: Paper presented at IEEE Resilience Week
-</p>
-</li><!--close item-->
-<li><p>September 2020: Paper published in IEEE Transactions on Smart Grid
-</p>
-</li>
-<li><p>Summer 2020: Awarded the Summer Faculty Research Grant
-</p>
-</li>
-<li><p>Fall 2019: Awarded the Rising STARs (Science and Technology Acquisition and Retention) grant by
-the <a href="https://www.utsystem.edu/" target=&ldquo;blank&rdquo;>the University of Texas System</a>
-</p>
-</li>
-</ul><!--close unordered list-->
-
-<!--This is an example text that won't be displayed in the browser-->
-<h2>Research Interests
-</h2>
-<p>Microgrids are ﬁnite-inertia power systems that integrate distributed generation to include renewable energy resources, energy storage, and loads. 
-Such microgrids have evolved into cyber-physical systems due to complex software-based controllers, internet of things (IoT), and communication networks 
-making them vulnerable to cyber intrusions. Omar A. Beg's multidisciplinary research aims to apply the techniques from formal methods and artificial 
-intelligence to make such microgrids more resilient against cyber attacks and physical faults. The outcome of his research will result in intelligent techniques 
-to ensure cyber-physical microgrids have trusted assurance despite potential emergent contingencies, attacks, and failures. His aim is to promote research 
-and education on smart grids and resilient power systems.   
-</p>
-
-
-<h2>Education
-</h2>
-<ul>
-<li><p>Ph.D., Electrical Engineering, <a href="http://www.uta.edu" target=&ldquo;blank&rdquo;>The University of Texas at Arlington</a>, July 2017 
-<br><!--new line-->
-Dissertation Title: Formal Verification of DC Distribution Networks, 
-Advisors: <a href="https://mentis.uta.edu/explore/profile/ali-davoudi" target=&ldquo;blank&rdquo;>Ali Davoudi</a> 
-and <a href="http://www.taylortjohnson.com/" target=&ldquo;blank&rdquo;>Taylor T. Johnson</a>
-
-
-</p>
-</li>
-</ul>
-<h2>Teaching
-</h2>
-<ul>
-<li><p>Spring 2021: Design Methods in Electrical Engineering, Fundamentals of Circuit Analysis, Digital Circuit Design Lab, Signals and Systems
-</p>
-</li>
-<li><p>Fall 2020: Foundations of Electrical Engineering, Electromagnetic Fields, Fundamentals of Circuit Analysis Lab, Electronics Circuits Lab
-</p>
-</li>
-<li><p>Summer 2020: Fundamentals of Circuit Analysis
-</p>
-</li>
-<li><p>Spring 2020: Signals and Systems, Fundamentals of Circuit Analysis
-</p>
-</li>
-<li><p>Fall 2019: Digital Circuit Design and Lab, Electromagnetic Fields, Fundamental of Circuit Analysis Lab
-
-
-
-
-
-
-</p>
-</li>
-</ul>
-<h2>Award and Honors 
-</h2>
-<ul>
-<li><p>As PI - Instrumentation grant $291,937 approved by the Department of Defense in May 2021
-</p>
-</li><!--close first item-->
-<li><p>As PI - Support grant $112,500 for undergraduate students approved by Texas Higher Education Coordinating Board in March 2021
-</p>
-</li><!--close second item-->
-<li><p>Summer Faculty Research Grant 2020
-</p>
-</li>
-<li><p>The Rising STARs (Science and Technology Acquisition and Retention) grant by
-the <a href="https://www.utsystem.edu/" target=&ldquo;blank&rdquo;>the University of Texas System</a>
-</p>
-</li>
-<li><p>Summer Graduate Research Internship by US Air Force Research Laboratory during Summer 2015, Rome, NY	
-</p>
-</li>
-<li><p>NSF Travel Award for International Conference on Formal Methods in Computer-Aided Design (FMCAD-2015), Austin, TX
-</p>
-</li>
-<li><p>NSF Travel Award for Cyber-physcial Systems Week 2017 at Carnegie Mellon University, Pittsburgh, PA
-
-
-
-
-
-</p>
-</li>
-</ul>
-<h2>Publications
-</h2>
-<ul>
-<li><p><b>Journal Articles:</b>
-</p>
-<ul>
-<li><p>Shan Zuo, <b>Omar A. Beg</b>, Ali Davoudi, and Frank L. Lewis,&ldquo;Resilient Networked AC Microgrids
-Under Unbounded Cyber Attacks,&rdquo; in IEEE Transactions on Smart Grid, vol. 11, no. 5, pp. 3785-3794, Sept. 2020
-</p>
-</li>
-<li><p><b>Omar A. Beg</b>, Luan Viet Nguyen, Taylor T. Johnson and Ali Davoudi, &ldquo;Signal Temporal Logic-based Attack Detection in DC Microgrids,&rdquo; 
-IEEE Transactions on Smart Grid, vol. 10, no. 4, pp. 3585-3595, July 2019 (<a href="https://ieeexplore.ieee.org/document/8353490" target=&ldquo;blank&rdquo;>link</a>)
-</p>
-</li>
-<li><p><b>Omar A. Beg</b>, Houssam Abbas, Taylor T. Johnson, and Ali Davoudi, &ldquo;Model Validation of PWM
-DC-DC Converters,&rdquo; in IEEE Transactions on Industrial Electronics, vol. 64, no. 9, pp. 7049-7059,
-Sept. 2017
-</p>
-</li>
-<li><p><b>Omar A. Beg</b>, Taylor T. Johnson, and Ali Davoudi, &ldquo;Detection of False-data Injection Attacks in
-Cyber-Physical DC Microgrids,&rdquo; in IEEE Transactions on Industrial Informatics, vol. 13, no. 5, pp.
-2693-2703, Oct. 2017
-</p>
-</li>
-<li><p>Stanley Bak, <b>Omar A. Beg</b>, Sergiy Bogomolov, Taylor T. Johnson, Luan Viet Nguyen, and Christian Schilling, 
-&ldquo;Hybrid Automata: from Verification to Implementation,&rdquo; International Journal on Software Tools for Technology 
-Transfer, Springer, vol. 21, pp. 87-104, February 2019 (<a href="http://www.taylortjohnson.com/research/bak2017sttt.pdf" target=&ldquo;blank&rdquo;>link</a>)
-
-
-
-</p>
-</li></ul>
-</li>
-<li><p><b>Conference/Workshops Proceeding Papers:</b>
-</p>
-<ul>
-<li><p><b>Omar A. Beg</b>, Luan Viet Nguyen, Taylor T. Johnson and Ali Davoudi, &ldquo;Computer-Aided Formal Verification of Power Electronics Circuits,&rdquo; 
-Frontiers in Analog CAD, Frankfurt, Germany, 2017 (<a href="http://www.taylortjohnson.com/research/beg2017fac.pdf" target=&ldquo;blank&rdquo;>link</a>)
-</p>
-</li>
-<li><p><b>Omar A. Beg</b>, Ali Davoudi, and Taylor T. Johnson, &ldquo;Reachability Analysis of Transformer-Isolated
-DC-DC Converters (Benchmark Proposal),&rdquo; 4th International Workshop on Applied Verification for
-Continuous and Hybrid Systems (ARCH 2017), Co-located with the Cyber-Physical Systems Week
-2017, Pittsburgh, PA, April 2017
-</p>
-</li>
-<li><p><b>Omar A. Beg</b>, Ali Davoudi, and Taylor T. Johnson, &ldquo;Charge Pump Phase-Locked Loops and Full Wave
-Rectifiers for Reachability Analysis (Benchmark Proposal),&rdquo; 3rd International Workshop on Applied
-Verification for Continuous and Hybrid Systems (ARCH 2016), Co-located with the Cyber-Physical
-Systems Week, Vienna, Austria, April 2016
-
-
-
-</p>
-</li></ul>
-</li>
-<li><p><b>Research Presentations and Talks:</b>
-</p>
-<ul>
-<li><p><b>Omar A. Beg</b> and Ali Davoudi, &ldquo;Scalable Formal Verification of Resilient Converter-dominated MVDC Networks,&rdquo; in
-the Office of Naval Research Controls Workshop at the University of Virginia, Blacksburg, VA, 2019
-</p>
-</li>
-<li><p><b>Omar A. Beg</b>, Shankar Abhinav, and Ali Davoudi, &ldquo;Resilient Microgrid Control,&rdquo; in the Office of
-Naval Research Controls Workshop, Arlington, TX, 2018
-</p>
-</li>
-<li><p><b>Omar A. Beg</b>, Ali Davoudi, and Taylor T. Johnson, &ldquo;Detecting and Mitigating Cyber-Physical
-Attacks with Invariant Inference and Runtime Assurance”, poster presentation at US Air Force Research
-Laboratory, Rome, NY, 2015
-</p>
-</li>
-<li><p><b>Omar A. Beg</b>, Ali Davoudi, and Taylor T. Johnson, &ldquo;Formal Verification of Software-controlled Power
-Electronics,&rdquo; in US Air Force Research Laboratory Safe and Secure Systems and Software Symposium,
-Dayton, OH, 2015
-</p>
-</li>
-<li><p><b>Omar A. Beg</b>, Ali Davoudi, and Taylor T. Johnson, &ldquo;Computer Aided Formal Verification of Power
-Electronics Based Cyber-physical Systems,&rdquo; in Formal Methods in Computer Aided Design, Austin, TX,
-2015
-
-
-
-
-
-
-
-
-</p>
-</li>
-</ul>
-<div id="footer">
-<div id="footer-text">
-</div>
-</div>
-</td>
-</tr>
-</table>
 </body>
 </html>
